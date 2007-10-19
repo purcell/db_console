@@ -7,6 +7,13 @@ only to find you forgot all those '-u' and '-h' parameters?
 This plugin provides handy rake tasks for running DB console programs for the various databases
 in your database.yml.  It supports postgresql, mysql, sqlite and sqlite3 connections.
 
+The plugin's home on the web is here:
+
+   http://www.sanityinc.com/                             - articles and news
+   http://git.sanityinc.com/?p=db_console.git;a=summary  - code and downloads
+
+Send feedback or patches by email to steve@sanityinc.com
+
 
 Examples
 ========
