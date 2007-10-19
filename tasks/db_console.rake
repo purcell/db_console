@@ -1,3 +1,5 @@
+require 'yaml'
+
 namespace :db do
   def find_cmd(*commands)
     commands.detect do |cmd|
