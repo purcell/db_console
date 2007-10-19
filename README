@@ -1,0 +1,24 @@
+DBConsole
+=========
+
+Ever tried using 'psql' or 'mysql' on the command-line to connect to your Rails database,
+only to find you forgot all those '-u' and '-h' parameters?
+
+This plugin provides handy rake tasks for running DB console programs for the various databases
+in your database.yml.  It supports postgresql, mysql, sqlite and sqlite3 connections.
+
+
+Examples
+========
+
+% rake db:console                  # Connect to your RAILS_ENV database
+% rake db:console:production       # Connect to the production database
+% rake db:console:test             # Connect to the test database
+% rake db:console:some_other_db    # Connect to some_other_db defined in database.yml
+% RAILS_ENV=test rake db:console   # Connect to the test database
+
+
+
+Copyright (c) 2007 Steve Purcell, released under the MIT license
+
+Thanks to Larry Baltz.
