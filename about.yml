@@ -1,0 +1,6 @@
+author: Steve Purcell
+summary: "A set of handy db:console:* rake tasks"
+homepage: http://http://www.sanityinc.com/articles/rails-db-console
+plugin: http://rails-plugins.sanityinc.com/db_console/
+license: MIT
+rails_version: 1.2+
