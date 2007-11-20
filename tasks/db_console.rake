@@ -2,8 +2,10 @@ require 'yaml'
 
 namespace :db do
   def find_cmd(*commands)
+    dirs_on_path = ENV['PATH'].split(File::PATH_SEPARATOR)
+    commands += commands.map{|cmd| "#{cmd}.exe"} if RUBY_PLATFORM =~ /win32/
     commands.detect do |cmd|
-      ENV['PATH'].split(File::PATH_SEPARATOR).detect do |path|
+      dirs_on_path.detect do |path|
         File.executable? File.join(path, cmd)
       end
     end || raise("couldn't find matching executable: #{commands.join(', ')}")
