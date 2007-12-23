@@ -29,9 +29,9 @@ namespace :db do
           ENV['PGPASSWORD'] = config["password"].to_s if config["password"]
           system(find_cmd('psql'), '-U', config["username"], config["database"])
         when "sqlite"
-          system(find_cmd('sqlite'), config["dbfile"])
+          system(find_cmd('sqlite'), config["database"])
         when "sqlite3"
-          system(find_cmd('sqlite3'), config["dbfile"])
+          system(find_cmd('sqlite3'), config["database"])
         else raise "not supported for this database type"
         end
       end
