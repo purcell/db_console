@@ -24,10 +24,11 @@ namespace :db do
                  '--default-character-set', config["encoding"],
                  '-D', config["database"])
         when "postgresql"
+          ENV['PGUSER']     = config["username"] if config["username"]
           ENV['PGHOST']     = config["host"] if config["host"]
           ENV['PGPORT']     = config["port"].to_s if config["port"]
           ENV['PGPASSWORD'] = config["password"].to_s if config["password"]
-          system(find_cmd('psql'), '-U', config["username"], config["database"])
+          system(find_cmd('psql'), config["database"])
         when "sqlite"
           system(find_cmd('sqlite'), config["database"])
         when "sqlite3"
